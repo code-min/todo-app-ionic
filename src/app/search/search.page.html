@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button menu="primary"></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Common Todos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <app-todo-item [todos]="loadedCommonTodos" color="success"></app-todo-item>
+  </ion-list>
+</ion-content>

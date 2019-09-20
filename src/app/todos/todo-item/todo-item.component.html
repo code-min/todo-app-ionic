@@ -1,0 +1,12 @@
+<ion-item-sliding *ngFor="let todo of todos" #slidingItem>
+<ion-item-options>
+    <ion-item-option [color]="color">
+      <ion-label *ngIf="!showIcon" (click)="onAddTodo(slidingItem, todo.name, todo.id)">Add</ion-label>
+      <ion-icon slot="icon-only" name="trash" *ngIf="showIcon === 'show'" (click)="onDeleteTodo(slidingItem, todo.id)"></ion-icon>
+    </ion-item-option>
+  </ion-item-options>
+
+  <ion-item (click)="showIcon &&onEditTodo(todo.name, todo.id)">
+    <ion-label>{{todo.name}}</ion-label>
+  </ion-item>
+</ion-item-sliding>

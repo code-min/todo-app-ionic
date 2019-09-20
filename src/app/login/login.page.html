@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Become more productive today!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">E-Mail:</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-text padding color="danger" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">*Please enter an email.</ion-text>
+    <ion-item>
+      <ion-label position="floating">Password:</ion-label>
+      <ion-input type="text" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-text padding color="danger" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">*Please enter a password with at least 5 characters.</ion-text>
+    <ion-button size="full" type="submit" [disabled]="!loginForm.valid">Login</ion-button>
+  </form>
+</ion-content>
