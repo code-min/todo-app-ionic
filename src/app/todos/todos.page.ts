@@ -4,8 +4,7 @@ import { TodosService } from '../services/todos.service';
 
 @Component({
   selector: 'app-todos',
-  templateUrl: './todos.page.html',
-  styleUrls: ['./todos.page.scss'],
+  templateUrl: './todos.page.html'
 })
 export class TodosPage implements OnInit {
   loadedUserTodos: Todo[];
