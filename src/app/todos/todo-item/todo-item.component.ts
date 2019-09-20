@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo-item',
-  templateUrl: './todo-item.component.html',
-  styleUrls: ['./todo-item.component.scss'],
+  templateUrl: './todo-item.component.html'
 })
 export class TodoItemComponent implements OnInit {
   @Input() todos: Todo[];
