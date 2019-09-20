@@ -4,8 +4,7 @@ import { Todo } from '../todos/todo';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.page.html',
-  styleUrls: ['./search.page.scss'],
+  templateUrl: './search.page.html'
 })
 export class SearchPage implements OnInit {
   loadedCommonTodos: Todo[];
